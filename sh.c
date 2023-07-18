@@ -11,7 +11,7 @@ size_t nline = 0;
 pid_t process_pid;
 int i = 0, inter_mode = isatty(STDIN_FILENO);
 if (!inter_mode)
-{	nlines = _getline(&userinput, &nline, stdin);
+{	nlines = getline(&userinput, &nline, stdin);
 	if (_strcmp(userinput, "exit") == 0)
 		;
 	else if (_strcmp(userinput, "env") == 0)
@@ -23,7 +23,7 @@ while (inter_mode)
 {
 	if (nlines != -1)
 	{write(STDOUT_FILENO, "#cisfun$ ", 10);
-	nlines = _getline(&userinput, &nline, stdin); }
+	nlines = getline(&userinput, &nline, stdin); }
 	if (nlines == -1)
 	{
 		if (feof(stdin))
