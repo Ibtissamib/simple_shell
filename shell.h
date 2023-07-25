@@ -12,9 +12,7 @@
 
 /*Function Prototypes*/
 void sh_cmd(char *line, ssize_t n);
-int exit_handler(char *userinputs, ssize_t nlines);
 int _strcmp(char *s1, char *s2);
-char *_delim(char *userinput, ssize_t nlines);
 ssize_t _strlen(char *s);
 char *_strdup(char *str);
 int nbr_wrd(char *str, ssize_t nlines);
