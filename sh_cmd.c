@@ -25,7 +25,6 @@ void _path_handler(char *userinput, ssize_t nlines)
 		cmd = _strdup(b);
 	b = strtok(NULL, " ");
 	for (j = 1; j < matrix_size; j++)
-	
 	{
 		if (j == matrix_size - 1)
 		{
