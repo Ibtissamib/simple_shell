@@ -17,7 +17,7 @@ int main(void)
 			;
 		else if (_strcmp(userinput, "env") == 0)
 			_print_env();
-		else
+		else if (call_fork(userinput, n) == 1)
 			_exec_cmd(userinput, n); }
 	while (inter_mode)
 	{
@@ -36,7 +36,7 @@ int main(void)
 		;
 		else if (_strcmp(userinput, "env") == 0)
 			_print_env();
-		else
+		else if (call_fork(userinput, n) == 1)
 		{	process_pid = fork();
 			if (process_pid == -1)
 				perror("fork");
