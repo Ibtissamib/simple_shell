@@ -2,14 +2,14 @@
 /**
  * _path_handler-handles path
  * @userinput: pointer to char
- * @nlines: ssize_t
+ * @n: ssize_t
  * Return: void
  */
-void _path_handler(char *userinput, ssize_t nlines)
+void _path_handler(char *userinput, ssize_t n)
 {	ssize_t j = 0, matrix_size = 0, finder_path = 0;
 	char **argv, *b, *cmd,  *path_cmd, *s;
 
-	matrix_size = nbr_wrd(userinput, nlines);
+	matrix_size = nbr_wrd(userinput, n);
 	argv = (char **)malloc(sizeof(char *) * (matrix_size + 1));
 	b = strtok(userinput, " ");
 	if (j == matrix_size - 1)
