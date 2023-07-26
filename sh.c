@@ -34,6 +34,8 @@ while (inter_mode)
 	if (nlines != -1)
 	{write(STDOUT_FILENO, "#cisfun$ ", 10);
 	nlines = getline(&userinput, &nline, stdin); }
+	if (_strcmp(userinput, "exit") == 0)
+		break;
 	if (nlines == -1)
 	{
 		if (feof(stdin))
@@ -45,15 +47,12 @@ while (inter_mode)
 		;
 	else if (_strcmp(userinput, "env") == 0)
 		_print_env();
-	else if (_strcmp(userinput, "exit") == 0)
-		break;
 	else
 	{	process_pid = fork();
 		if (process_pid == -1)
 			perror("fork");
 		else if (process_pid == 0)
-		{	sh_cmd(userinput, nlines);
-			nlines = -1; }
+			sh_cmd(userinput, nlines);
 		else
 			wait(NULL); } }
 	free(userinput);
