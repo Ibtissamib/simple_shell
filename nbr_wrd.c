@@ -12,7 +12,7 @@ int nbr_wrd(char *str, ssize_t n)
 
 	while (j < n)
 	{
-		if ((str[j] != ' ')  && ((str[j - 1] == ' ') || (j == 0)))
+		if ((str[j] != ' ') && (str[j - 1] == ' ' || j == 0))
 			len++;
 		j++;
 	}
