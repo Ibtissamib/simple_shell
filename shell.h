@@ -21,6 +21,7 @@ char *str_concat(char *s1, char *s2);
 void _path_handler(char *userinput, ssize_t nlines);
 ssize_t _getline(char **line, size_t *len, FILE *stream);
 int call_fork(char *userinput, ssize_t nlines);
+void _print_env(void);
 
 
 /*Data Structures*/
