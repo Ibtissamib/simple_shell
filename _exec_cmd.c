@@ -1,11 +1,11 @@
 #include "shell.h"
 /**
- * sh_cmd- executes commands
+ * _exec_cmd- executes commands
  * @userinput: pointer to the userinput
  * @nlines: lenght of userinput
  * Return: void
  */
-void sh_cmd(char *userinput, ssize_t nlines)
+void _exec_cmd(char *userinput, ssize_t nlines)
 {char **argv;
 	ssize_t j = 0, i = 0, matrix_size = 0;
 	char *b;

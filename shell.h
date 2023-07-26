@@ -11,7 +11,7 @@
 
 
 /*Function Prototypes*/
-void sh_cmd(char *line, ssize_t n);
+void _exec_cmd(char *userinput, ssize_t n);
 int _strcmp(char *s1, char *s2);
 ssize_t _strlen(char *s);
 char *_strdup(char *str);
